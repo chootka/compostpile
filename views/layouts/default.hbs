@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>The Compost Pile</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- <link rel="stylesheet" href="/css/main.min.css"> -->
+</head>
+<body class="{{template}}">
+  <div class="container">
+    {{{ body }}}
+  </div>
+
+  <script src="/js/socket-io/socket.io.slim.js"></script>
+  <script>
+  	var socket = io.connect('http://localhost:3000');
+  	socket.on('refresh', (data) => {
+  		location.reload();
+	});
+  </script>
+</body>
+</html>
