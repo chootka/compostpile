@@ -194,3 +194,6 @@
 2019-05-31T22:33:36.160+0200 I NETWORK  [conn46] end connection 127.0.0.1:49685 (3 connections now open)
 2019-05-31T22:33:36.160+0200 I NETWORK  [conn44] end connection 127.0.0.1:49670 (2 connections now open)
 2019-05-31T22:33:36.577+0200 I NETWORK  [conn45] end connection 127.0.0.1:49680 (1 connection now open)
+2019-05-31T22:42:33.311+0200 I NETWORK  [listener] connection accepted from 127.0.0.1:50136 #47 (2 connections now open)
+2019-05-31T22:42:33.317+0200 I NETWORK  [conn47] received client metadata from 127.0.0.1:50136 conn47: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-05-31T22:42:43.348+0200 I NETWORK  [conn47] end connection 127.0.0.1:50136 (1 connection now open)
