@@ -63,7 +63,7 @@ app.get('/', (req, res) => {
       	
       	let images = [];
       	for (var r in results) {
-        	images.push('data:image/jpeg;base64,' + arrayBufferToBase64(results[r].image.buffer));
+        	images.push('data:image/bmp;base64,' + arrayBufferToBase64(results[r].image.buffer));
         }
 
         console.log("images", images);
@@ -88,7 +88,7 @@ app.post('/save', upload.single('file'), (req, res) => {
 
 	// Define a JSONobject for the image attributes for saving to database
 	var finalImg = {
-		contentType: 'image/jpeg',
+		contentType: 'image/bmp',
 		image: fs.readFileSync(req.file.path)
 	};
 
