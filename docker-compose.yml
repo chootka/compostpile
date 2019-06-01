@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  node-p2p:
+    working_dir: /home/node/app
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    image: node
+    container_name: node-p2p
+    restart: unless-stopped
+    entrypoint: ./docker-entrypoint.sh
+    #env_file: .env
+    environment:
+    #  - MONGO_USERNAME=$MONGO_USERNAME
+    #  - MONGO_PASSWORD=$MONGO_PASSWORD
+      - MONGO_HOSTNAME=db
+      - MONGO_PORT=27017
+    #  - MONGO_DB=$MONGO_DB
+    #expose:
+    #  - "3000"
+    links:
+      - db
+    ports:
+      - "127.0.0.1:13001:8080"
+    volumes:
+      - .:/home/node/app
+      #- node_modules:/home/node/app/node_modules
+
+  db:
+    image: mongo:4.0
+    container_name: db
+    restart: unless-stopped
+    #env_file: .env
+    #environment:
+    #  - MONGO_INITDB_ROOT_USERNAME=$MONGO_USERNAME
+    #  - MONGO_INITDB_ROOT_PASSWORD=$MONGO_PASSWORD
+    volumes:  
+      - ./data/db:/data/db   
+
