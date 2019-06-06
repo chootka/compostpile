@@ -1,5 +1,4 @@
 // call all the required packages
-const jpeg 							= require('jpeg-js');
 const util 							= require('util');
 const express 						= require('express');
 const http 							= require('http');
