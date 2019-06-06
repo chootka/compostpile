@@ -1,4 +1,5 @@
 // call all the required packages
+const jpeg 							= require('jpeg-js');
 const util 							= require('util');
 const express 						= require('express');
 const http 							= require('http');
@@ -34,12 +35,21 @@ app.engine( 'hbs', hbs( {
 // Base64 Encoder
 var arrayBufferToBase64 = function(buffer) {
 
-    // var binary = '';
-    // var bytes = [].slice.call(new Uint8Array(buffer));
-    // bytes.forEach((b) => binary += String.fromCharCode(b));
+    var binary = '';
+    var bytes = [].slice.call(new Uint8Array(buffer));
+    bytes.forEach((b) => binary += String.fromCharCode(b));
 
-    // return Buffer.from(binary).toString('base64');
-    return Buffer.from(buffer).toString('base64');
+    return Buffer.from(binary).toString('base64');
+    // return Buffer.from(buffer).toString('base64');
+};
+
+var hex2Ascii = function(str1) {
+	var hex  = str1.toString();
+	var str = '';
+	for (var n = 0; n < hex.length; n += 2) {
+		str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+	}
+	return str;
 };
 
 // SET STORAGE
@@ -58,12 +68,16 @@ var upload = multer({ storage: storage });
 app.get('/', (req, res) => {
 
 	// Get the most recent 7 images (latest from each arduino pair, in theory)
-	collection.find({}).sort({ $natural: -1 }).limit(7).toArray( (err, results) => {
+	// collection.find({}).sort({ $natural: -1 }).limit(7).toArray( (err, results) => {
+	collection.find({}).sort({ $natural: -1 }).toArray( (err, results) => {
     	if (err) return console.log(err);
       	
       	let images = [];
       	for (var r in results) {
-        	images.push('data:image/bmp;base64,' + arrayBufferToBase64(results[r].image.buffer));
+        	images.push({
+        		"image": 'data:image/bmp;base64,' + arrayBufferToBase64(results[r].image.buffer),
+        		"text": String.fromCharCode.apply(null, results[r].image.buffer)
+        	});
         }
 
         console.log("images", images);
@@ -120,7 +134,7 @@ io.on('connection', socket => {
 
 	// start listen to changes
 	changeStream && changeStream.on('change', function(event) {
-		// console.log('Got DB change', JSON.stringify(event));
+		console.log('Got DB change', JSON.stringify(event));
 		socket.emit('refresh');
 	});
 	

@@ -1,0 +1,100 @@
+2019-06-04T14:06:05.069+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-06-04T14:06:05.153+0100 I CONTROL  [initandlisten] MongoDB starting : pid=45678 port=27017 dbpath=/Users/airSchmao1/Documents/_workshops/London_IDA/dev/web/compostpile/./data/db 64-bit host=dvmb
+2019-06-04T14:06:05.154+0100 I CONTROL  [initandlisten] db version v4.0.9
+2019-06-04T14:06:05.154+0100 I CONTROL  [initandlisten] git version: fc525e2d9b0e4bceff5c2201457e564362909765
+2019-06-04T14:06:05.154+0100 I CONTROL  [initandlisten] allocator: system
+2019-06-04T14:06:05.154+0100 I CONTROL  [initandlisten] modules: none
+2019-06-04T14:06:05.154+0100 I CONTROL  [initandlisten] build environment:
+2019-06-04T14:06:05.154+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2019-06-04T14:06:05.154+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-06-04T14:06:05.154+0100 I CONTROL  [initandlisten] options: { net: { bindIp: "localhost", port: 27017 }, processManagement: { fork: true }, replication: { replSet: "rs0" }, storage: { dbPath: "./data/db" }, systemLog: { destination: "file", path: "var/log/mongod.log" } }
+2019-06-04T14:06:05.159+0100 W STORAGE  [initandlisten] Detected unclean shutdown - /Users/airSchmao1/Documents/_workshops/London_IDA/dev/web/compostpile/./data/db/mongod.lock is not empty.
+2019-06-04T14:06:05.159+0100 I STORAGE  [initandlisten] Detected data files in /Users/airSchmao1/Documents/_workshops/London_IDA/dev/web/compostpile/./data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-06-04T14:06:05.160+0100 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2019-06-04T14:06:05.160+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-06-04T14:06:07.007+0100 I STORAGE  [initandlisten] WiredTiger message [1559653567:6983][45678:0x7fffc23c63c0], txn-recover: Main recovery loop: starting at 4/3063808 to 5/256
+2019-06-04T14:06:07.008+0100 I STORAGE  [initandlisten] WiredTiger message [1559653567:8676][45678:0x7fffc23c63c0], txn-recover: Recovering log 4 through 5
+2019-06-04T14:06:07.254+0100 I STORAGE  [initandlisten] WiredTiger message [1559653567:254327][45678:0x7fffc23c63c0], file:sizeStorer.wt, txn-recover: Recovering log 5 through 5
+2019-06-04T14:06:07.303+0100 I STORAGE  [initandlisten] WiredTiger message [1559653567:303295][45678:0x7fffc23c63c0], file:sizeStorer.wt, txn-recover: Set global recovery timestamp: 5cf55ea000000001
+2019-06-04T14:06:07.693+0100 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(1559584416, 1)
+2019-06-04T14:06:07.701+0100 I STORAGE  [initandlisten] Triggering the first stable checkpoint. Initial Data: Timestamp(1559584416, 1) PrevStable: Timestamp(0, 0) CurrStable: Timestamp(1559584416, 1)
+2019-06-04T14:06:08.072+0100 I STORAGE  [initandlisten] Starting OplogTruncaterThread local.oplog.rs
+2019-06-04T14:06:08.072+0100 I STORAGE  [initandlisten] The size storer reports that the oplog contains 27386 records totaling to 3809296 bytes
+2019-06-04T14:06:08.073+0100 I STORAGE  [initandlisten] Sampling from the oplog between May 29 18:45:01:1 and Jun  4 09:00:49:1 to determine where to place markers for truncation
+2019-06-04T14:06:08.073+0100 I STORAGE  [initandlisten] Taking 2 samples and assuming that each section of oplog contains approximately 131581 records totaling to 18302452 bytes
+2019-06-04T14:06:08.255+0100 I CONTROL  [initandlisten] 
+2019-06-04T14:06:08.255+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-06-04T14:06:08.255+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-06-04T14:06:08.255+0100 I CONTROL  [initandlisten] 
+2019-06-04T14:06:08.255+0100 I CONTROL  [initandlisten] 
+2019-06-04T14:06:08.256+0100 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2019-06-04T14:06:08.843+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/airSchmao1/Documents/_workshops/London_IDA/dev/web/compostpile/./data/db/diagnostic.data'
+2019-06-04T14:06:08.869+0100 I REPL     [initandlisten] Rollback ID is 1
+2019-06-04T14:06:08.871+0100 I REPL     [initandlisten] Recovering from stable timestamp: Timestamp(1559584416, 1) (top of oplog: { ts: Timestamp(1559635249, 1), t: 4 }, appliedThrough: { ts: Timestamp(0, 0), t: -1 }, TruncateAfter: Timestamp(0, 0))
+2019-06-04T14:06:08.871+0100 I REPL     [initandlisten] Starting recovery oplog application at the stable timestamp: Timestamp(1559584416, 1)
+2019-06-04T14:06:08.871+0100 I REPL     [initandlisten] Replaying stored operations from { : Timestamp(1559584416, 1) } (exclusive) to { : Timestamp(1559635249, 1) } (inclusive).
+2019-06-04T14:06:08.875+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-06-04T14:06:08.876+0100 I CONTROL  [LogicalSessionCacheRefresh] Sessions collection is not set up; waiting until next sessions refresh interval: Replication has not yet been configured
+2019-06-04T14:06:08.877+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52355 #2 (1 connection now open)
+2019-06-04T14:06:08.878+0100 I NETWORK  [conn2] end connection 127.0.0.1:52355 (0 connections now open)
+2019-06-04T14:06:08.879+0100 I REPL     [replexec-0] New replica set config in use: { _id: "rs0", version: 1, protocolVersion: 1, writeConcernMajorityJournalDefault: true, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: -1, catchUpTakeoverDelayMillis: 30000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('5ceec51cf4dfa9281467c4ef') } }
+2019-06-04T14:06:08.879+0100 I REPL     [replexec-0] This node is localhost:27017 in the config
+2019-06-04T14:06:08.879+0100 I REPL     [replexec-0] transition to STARTUP2 from STARTUP
+2019-06-04T14:06:08.880+0100 I REPL     [replexec-0] Starting replication storage threads
+2019-06-04T14:06:08.880+0100 I REPL     [replexec-0] transition to RECOVERING from STARTUP2
+2019-06-04T14:06:08.880+0100 I REPL     [replexec-0] Starting replication fetcher thread
+2019-06-04T14:06:08.880+0100 I REPL     [replexec-0] Starting replication applier thread
+2019-06-04T14:06:08.880+0100 I REPL     [replexec-0] Starting replication reporter thread
+2019-06-04T14:06:08.880+0100 I REPL     [rsSync-0] Starting oplog application
+2019-06-04T14:06:08.880+0100 I REPL     [rsSync-0] transition to SECONDARY from RECOVERING
+2019-06-04T14:06:08.881+0100 I REPL     [rsSync-0] conducting a dry run election to see if we could be elected. current term: 4
+2019-06-04T14:06:08.881+0100 I REPL     [replexec-0] dry election run succeeded, running for election in term 5
+2019-06-04T14:06:08.927+0100 I REPL     [replexec-0] election succeeded, assuming primary role in term 5
+2019-06-04T14:06:08.927+0100 I REPL     [replexec-0] transition to PRIMARY from SECONDARY
+2019-06-04T14:06:08.927+0100 I REPL     [replexec-0] Resetting sync source to empty, which was :27017
+2019-06-04T14:06:08.928+0100 I REPL     [replexec-0] Entering primary catch-up mode.
+2019-06-04T14:06:08.928+0100 I REPL     [replexec-0] Exited primary catch-up mode.
+2019-06-04T14:06:08.928+0100 I REPL     [replexec-0] Stopping replication producer
+2019-06-04T14:06:09.024+0100 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2019-06-04T14:06:10.891+0100 I REPL     [rsSync-0] transition to primary complete; database writes are now permitted
+2019-06-04T14:06:14.637+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52357 #3 (1 connection now open)
+2019-06-04T14:06:14.644+0100 I NETWORK  [conn3] received client metadata from 127.0.0.1:52357 conn3: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T14:06:24.908+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52365 #4 (2 connections now open)
+2019-06-04T14:06:24.909+0100 I NETWORK  [conn4] received client metadata from 127.0.0.1:52365 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.7.0" } }
+2019-06-04T14:06:49.710+0100 I NETWORK  [conn3] end connection 127.0.0.1:52357 (1 connection now open)
+2019-06-04T14:06:56.427+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52373 #5 (2 connections now open)
+2019-06-04T14:06:56.433+0100 I NETWORK  [conn5] received client metadata from 127.0.0.1:52373 conn5: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T14:08:11.009+0100 I NETWORK  [conn5] end connection 127.0.0.1:52373 (1 connection now open)
+2019-06-04T14:08:12.596+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52396 #6 (2 connections now open)
+2019-06-04T14:08:12.603+0100 I NETWORK  [conn6] received client metadata from 127.0.0.1:52396 conn6: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T14:10:24.875+0100 I NETWORK  [conn6] end connection 127.0.0.1:52396 (1 connection now open)
+2019-06-04T14:10:26.499+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52409 #7 (2 connections now open)
+2019-06-04T14:10:26.505+0100 I NETWORK  [conn7] received client metadata from 127.0.0.1:52409 conn7: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T14:11:40.135+0100 I NETWORK  [conn7] end connection 127.0.0.1:52409 (1 connection now open)
+2019-06-04T14:11:41.730+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52434 #8 (2 connections now open)
+2019-06-04T14:11:41.735+0100 I NETWORK  [conn8] received client metadata from 127.0.0.1:52434 conn8: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T14:12:15.285+0100 I NETWORK  [conn8] end connection 127.0.0.1:52434 (1 connection now open)
+2019-06-04T14:12:16.539+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52583 #9 (2 connections now open)
+2019-06-04T14:12:16.545+0100 I NETWORK  [conn9] received client metadata from 127.0.0.1:52583 conn9: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T14:12:20.410+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52606 #10 (3 connections now open)
+2019-06-04T14:12:20.411+0100 I NETWORK  [conn10] received client metadata from 127.0.0.1:52606 conn10: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T14:12:20.426+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52610 #11 (4 connections now open)
+2019-06-04T14:12:20.426+0100 I NETWORK  [conn11] received client metadata from 127.0.0.1:52610 conn11: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T14:12:20.447+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52612 #12 (5 connections now open)
+2019-06-04T14:12:20.451+0100 I NETWORK  [conn12] received client metadata from 127.0.0.1:52612 conn12: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T15:19:14.089+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52767 #13 (6 connections now open)
+2019-06-04T15:19:14.100+0100 I NETWORK  [conn13] received client metadata from 127.0.0.1:52767 conn13: { driver: { name: "nodejs", version: "3.2.6" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.7.0" }, platform: "Node.js v6.11.0, LE, mongodb-core: 3.2.6" }
+2019-06-04T18:06:23.018+0100 W FTDC     [ftdc] Uncaught exception in 'FileNotOpen: Failed to open interim file /Users/airSchmao1/Documents/_workshops/London_IDA/dev/web/compostpile/./data/db/diagnostic.data/metrics.interim.temp' in full-time diagnostic data capture subsystem. Shutting down the full-time diagnostic data capture subsystem.
+2019-06-04T18:06:33.351+0100 E STORAGE  [WTCheckpointThread] WiredTiger error (28) [1559667993:351420][45678:0x700008d2c000], file:WiredTiger.wt, WT_SESSION.checkpoint: __posix_open_file, 715: /Users/airSchmao1/Documents/_workshops/London_IDA/dev/web/compostpile/./data/db/WiredTiger.turtle.set: handle-open: open: No space left on device Raw: [1559667993:351420][45678:0x700008d2c000], file:WiredTiger.wt, WT_SESSION.checkpoint: __posix_open_file, 715: /Users/airSchmao1/Documents/_workshops/London_IDA/dev/web/compostpile/./data/db/WiredTiger.turtle.set: handle-open: open: No space left on device
+2019-06-04T18:06:33.351+0100 E STORAGE  [WTCheckpointThread] WiredTiger error (22) [1559667993:351588][45678:0x700008d2c000], file:WiredTiger.wt, WT_SESSION.checkpoint: __wt_block_checkpoint_resolve, 859: WiredTiger.wt: the checkpoint failed, the system must restart: Invalid argument Raw: [1559667993:351588][45678:0x700008d2c000], file:WiredTiger.wt, WT_SESSION.checkpoint: __wt_block_checkpoint_resolve, 859: WiredTiger.wt: the checkpoint failed, the system must restart: Invalid argument
+2019-06-04T18:06:33.351+0100 E STORAGE  [WTCheckpointThread] WiredTiger error (-31804) [1559667993:351622][45678:0x700008d2c000], file:WiredTiger.wt, WT_SESSION.checkpoint: __wt_panic, 520: the process must exit and restart: WT_PANIC: WiredTiger library panic Raw: [1559667993:351622][45678:0x700008d2c000], file:WiredTiger.wt, WT_SESSION.checkpoint: __wt_panic, 520: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2019-06-04T18:06:33.351+0100 F -        [WTCheckpointThread] Fatal Assertion 50853 at src/mongo/db/storage/wiredtiger/wiredtiger_util.cpp 409
+2019-06-04T18:06:33.351+0100 F -        [WTCheckpointThread] 
+
+***aborting after fassert() failure
+
+
+2019-06-04T18:06:33.441+0100 F -        [WTCheckpointThread] Got signal: 6 (Abort trap: 6).
+ 0x106236ef9 0x1062367cd 0x7fffb9657b3a 0xc 0x7fffb94dc420 0x10622cf8e 0x104b61f25 0x104c765e0 0x104c75fec 0x104c76fc7 0x104b6b546 0x104caabf7 0x104caa345 0x104ca83f4 0x104c705c0 0x104b3efff 0x105d5e0a9 0x105d5fb10 0x7fffb966193b 0x7fffb9661887 0x7fffb966108d
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"104ADB000","o":"175BEF9","s":"_ZN5mongo15printStackTraceERNSt3__113basic_ostreamIcNS0_11char_traitsIcEEEE"},{"b":"104ADB000","o":"175B7CD","s":"_ZN5mongo12_GLOBAL__N_110abruptQuitEi"},{"b":"7FFFB9655000","o":"2B3A","s":"_sigtramp"},{"b":"0","o":"C"},{"b":"7FFFB947D000","o":"5F420","s":"abort"},{"b":"104ADB000","o":"1751F8E","s":"_ZN5mongo25fassertFailedWithLocationEiPKcj"},{"b":"104ADB000","o":"86F25","s":"_ZN5mongo12_GLOBAL__N_141mdb_handle_error_with_startup_suppressionEP18__wt_event_handlerP12__wt_sessioniPKc"},{"b":"104ADB000","o":"19B5E0","s":"__eventv"},{"b":"104ADB000","o":"19AFEC","s":"__wt_err_func"},{"b":"104ADB000","o":"19BFC7","s":"__wt_panic"},{"b":"104ADB000","o":"90546","s":"__wt_block_checkpoint_resolve"},{"b":"104ADB000","o"
