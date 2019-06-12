@@ -31,7 +31,7 @@ Steps shown here taken from MongoDB docs: https://docs.mongodb.com/manual/tutori
 `$ npm init`  
 `$ node server.js`  
 
-###Additional resources I read while setting this project up:###  
+### Additional resources I read while setting this project up: ###  
 https://code.tutsplus.com/tutorials/file-upload-with-multer-in-node--cms-32088  
 https://medium.com/@colinrlly/send-store-and-show-images-with-react-express-and-mongodb-592bc38a9ed  
 https://severalnines.com/blog/real-time-data-streaming-mongodb-change-streams  
